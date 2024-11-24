@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Anita</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary light-mode">
+        <div class="container">
+            <a class="navbar-brand" href="#">Veterinaria Anita</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex ms-3">
+                    <button id="btn-light" class="btn btn-outline-light me-2">Modo Claro</button>
+                    <button id="btn-dark" class="btn btn-outline-dark">Modo Oscuro</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container text-center my-5">
+        <h1 class="display-4">¡Bienvenido a Veterinaria Anita!</h1>
+        <p class="lead">Atención veterinaria 24/7 y servicios de baño para tu mascota.</p>
+        <img src="vete.jpg" class="img-fluid rounded mx-auto d-block" alt="Perro en veterinaria" style="max-width: 500px;">
+    </div>
+
+    <!-- Servicios -->
+    <div id="servicios" class="container my-5">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <table class="table table-bordered table-striped">
+            <thead class="table-primary">
+                <tr>
+                    <th>Servicio</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Baño para Perros</td>
+                    <td>Baño y corte de uñas para mantener a tu mascota limpia y saludable.</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>Consulta Veterinaria</td>
+                    <td>Atención médica para todas las necesidades de tu mascota.</td>
+                    <td>$800</td>
+                </tr>
+                <tr>
+                    <td>Emergencias 24/7</td>
+                    <td>Servicio de emergencias veterinarias, disponible las 24 horas del día.</td>
+                    <td>$1200</td>
+                </tr>
+                <tr>
+                    <td>Vacunación</td>
+                    <td>Aplicación de vacunas para perros y gatos, conforme a su calendario de salud.</td>
+                    <td>$600</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Contacto -->
+    <div id="contacto" class="container my-5">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <form action="#" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-primary text-white text-center py-3 light-mode">
+        <p class="mb-0">© 2024 Veterinaria Anita. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $$(document).ready(function () {
+    // Modo claro
+    $('#btn-light').click(function () {
+        $('body').removeClass('dark-mode').addClass('light-mode');
+        $('.navbar').removeClass('dark-mode').addClass('light-mode');
+        $('.footer').removeClass('dark-mode').addClass('light-mode');
+    });
+
+    // Modo oscuro
+    $('#btn-dark').click(function () {
+        $('body').removeClass('light-mode').addClass('dark-mode');
+        $('.navbar').removeClass('light-mode').addClass('dark-mode');
+        $('.footer').removeClass('light-mode').addClass('dark-mode');
+    });
+});
+    </script>
+</body>
+</html>
